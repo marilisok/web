@@ -1,0 +1,96 @@
+body{
+    background: url("/public/pictures/white-cubes.png");
+}
+
+.column{
+    float: left;
+    margin-top: -30px;
+    margin-left: 30px;
+}
+
+.portlet-content{
+    background-color: aquamarine;
+}
+#user_page{
+    width: 960px;
+}
+#budget-portlet{
+    width: 500px;
+    text-align: center;
+    font-size: 14pt;
+}
+
+#time-portlet{
+    width: 500px;
+    text-align: center;
+    font-size: 14pt;
+}
+
+#picture-portlet{
+    width: 700px;
+    text-align: center;
+    font-size: 14pt;
+    margin-left: 25%;
+}
+
+#button-portlet{
+    width: 150px;
+    text-align: center;
+    font-size: 14pt;
+    margin-left: -730px;
+}
+
+#picture-portlet-content{
+    text-align: center;
+}
+
+#img{
+    width: 450px;
+    height: 450px;
+    text-align: center;
+}
+
+#picture{
+    margin-left: 125px;
+    width: 450px;
+    height: 450px;
+    display: none;
+}
+
+#auctionStr{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Harlow Solid Italic";
+    font-size: 40pt;
+}
+
+#newPriceButton{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#msgs-portlet{
+    width: 500px;
+    font-size: 14pt;
+}
+
+#lastPicId{
+    display: none;
+}
+
+#newPrice{
+    text-align: center;
+}
+
+#newPriceButton{
+    margin-top: 10px;
+}
+
+#priceUpSlider{
+    text-align: center;
+}
+
+#block{
+    margin-top: 20px;
+    background-color: aquamarine;
+}

@@ -1,0 +1,36 @@
+body{
+    background: url("/public/pictures/white-cubes.png");
+}
+
+#welcomeStr{
+    text-align: center;
+    margin-top: 80px;
+    font-family: "Harlow Solid Italic";
+    font-size: 30pt;
+}
+
+#authorizeStr{
+    text-align: center;
+    font-family: "Harlow Solid Italic";
+    font-size: 20pt;
+    margin-top: 100px;
+}
+
+#enterForm{
+    text-align: center;
+}
+
+#name{
+    font-size: 16pt;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#enterAuction{
+    font-size: 16pt;
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    border: cyan inset 5px;
+}

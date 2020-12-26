@@ -1,0 +1,62 @@
+html
+    head
+        meta(charset="utf-8")
+        script(src='/public/scripts/jquery.js')
+        script(src='/public/scripts/jquery-ui.js')
+        script(src='/public/scripts/userPageListener.js')
+        script(src='http://localhost:3030/socket.io/socket.io.js')
+        title Аукцион
+    body
+        p#auctionStr Аукцион
+
+        div#user_page
+            div.column
+                div#budget-portlet.portlet
+                    div#budget-portlet-header.portlet-header Бюджет
+                    div#budget-portlet-content.portlet-content
+                        div#name
+                            =name
+                        div#budget
+                            =budget
+
+                if new Date() <  new Date(new Date(date).getFullYear(), new Date(date).getMonth(), new Date(date).getDate(), Number(start_time.split(':')[0]), Number(start_time.split(':')[1]), 0, 0)
+                    div#start
+                        div#start-time-portlet.portlet
+                            div#start-time-portlet-header.portlet-header Время начала аукциона:
+                            div#start-time-portlet-content.portlet-content
+                                div#start_time
+                                    =start_time
+
+                div#time-portlet.portlet
+                    div#time-portlet-header.portlet-header  Времени прошло
+                    div#time-portlet-content.portlet-content
+                        div#time
+
+                div#msgs-portlet.portlet
+                    div#msg-portlet-header.portlet-header  Сообщения
+                    div#msg-portlet-content.portlet-content
+                        ul#data
+
+            div.column
+                div#picture-portlet.portlet
+                    div#picture-portlet-header.portlet-header  Картина
+                    div#picture-portlet-content.portlet-content
+                        div#img
+                            img#picture
+                        div#pictureTitle
+                            div#pictureName
+                            div#pictureStartPrice
+                            div#pictureCurrentPrice
+                        div#priceUpSlider
+                            div#block
+                                div#newPrice
+                                input#newPriceButton(type="submit", value="Предложить новую цену")
+
+            div.column
+                div#button-portlet.portlet
+                    div#button-portlet-header.portlet-header  Покупки
+                    div#button-portlet-content.portlet-content
+                        input#toOrders(type="submit", value="К покупкам")
+
+            div#lastPicId
+                =lastPic

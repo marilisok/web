@@ -1,0 +1,39 @@
+body{
+    background: url("/public/pictures/white-cubes.png");
+}
+
+.portlet-content{
+    background-color: aquamarine;
+}
+
+.column{
+    float: left;
+    margin-top: -10px;
+    margin-left: 30px;
+    width: 700px;
+    text-align: center;
+}
+
+#adminStr{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Harlow Solid Italic";
+    font-size: 40pt;
+}
+
+#budget-portlet{
+    width: 400px;
+    text-align: center;
+    font-size: 14pt;
+}
+
+#msgs-portlet{
+    width: 600px;
+    font-size: 14pt;
+}
+
+#pictures-portlet{
+    width: 500px;
+    text-align: center;
+    font-size: 14pt;
+}

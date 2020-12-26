@@ -1,0 +1,24 @@
+body{
+    background: url("/public/pictures/white-cubes.png");
+}
+
+.portlet-content{
+    background-color: aquamarine;
+}
+
+#purchasesStr{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Harlow Solid Italic";
+    font-size: 40pt;
+}
+
+#pictures-portlet{
+    width: 1200px;
+    text-align: center;
+    font-size: 14pt;
+}
+
+#name{
+    display: none;
+}

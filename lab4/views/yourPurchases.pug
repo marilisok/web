@@ -1,0 +1,17 @@
+html
+    head
+        meta(charset="utf-8")
+        script(src='/public/scripts/jquery.js')
+        script(src='/public/scripts/jquery-ui.js')
+        script(src='/public/scripts/yourPurchasesListener.js')
+        script(src='http://localhost:3030/socket.io/socket.io.js')
+        title Аукцион
+    body
+        p#purchasesStr Ваши покупки
+        div#pictures-portlet.portlet
+            div#pictures-portlet-header.portlet-header Картины
+            div#pictures-portlet-content.portlet-content
+                ul#dataPicture
+
+        div#name
+            =name
