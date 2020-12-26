@@ -45,11 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="165">
+              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -127,11 +136,12 @@
         <option value="$PROJECT_DIR$/login.css" />
         <option value="$PROJECT_DIR$/mainPart/endPart/end.css" />
         <option value="$PROJECT_DIR$/mainPart/game.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="293" />
+    <option name="x" value="221" />
     <option name="y" value="23" />
     <option name="width" value="1111" />
     <option name="height" value="814" />
@@ -214,11 +224,12 @@
       <workItem from="1604959228808" duration="1204000" />
       <workItem from="1608556849496" duration="504000" />
       <workItem from="1609012552748" duration="381000" />
+      <workItem from="1609015615949" duration="69000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94095000" />
+    <option name="totallyTimeSpent" value="94164000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -230,8 +241,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="293" y="23" width="1111" height="814" extended-state="0" />
-    <editor active="true" />
+    <frame x="168" y="23" width="1111" height="814" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50224215" side_tool="true" weight="0.17889908" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49775785" visible="true" weight="0.13669725" />
@@ -407,8 +417,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="165">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
