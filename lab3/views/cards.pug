@@ -1,0 +1,68 @@
+extends layout
+
+block content
+    script(src="/gulpScripts/cards.js")
+    link(rel="stylesheet" href="/stylesheets/cards.css")
+    button(onclick="newPerson()") Добавить нового участника
+    div#id02
+        div
+            header
+                span(onclick="startConfig()") &times;
+                h2 Редактировать
+            div
+                form(name="pForm" method="POST")
+                    table
+                        tr
+                            th Имя участника:
+                            th
+                                input(name = "name")
+                        tr
+                            th Запас денежных средств:
+                            th
+                                input(type="number" name = "money")
+                    p
+                        p
+                            button#red(type="submit") ok
+                    p
+
+    div#id01
+        div
+            header
+                span(onclick="startConfig()") &times;
+                h2 Добавить нового участника
+            div
+                form(action="newPerson/" method="POST")
+                    table
+                        tr
+                            th id участника:
+                            th
+                                input(name = "id")
+                        tr
+                            th Имя участника:
+                            th
+                                input(name = "name")
+                        tr
+                            th Запас денежных средств:
+                            th
+                                input(type="number" name = "money")
+                    p
+                        p
+                            button#red1(type="submit") ok
+                    p
+    div
+        table#people
+            tr
+                th Имя участника
+                th Запас денежных средств
+            for item in persons
+                tr
+                    th #{item.name}
+                    th #{item.money}
+                    th
+                        form(action="deletePerson/" + item.id,  method="POST")
+                            button(type="submit") удалить
+                    th
+                        button(onclick="editPerson("+item.id+",\""+item.name+"\","+item.money+ ")") редактировать
+
+
+

@@ -1,0 +1,146 @@
+extends layout
+
+block content
+    div
+        script(src="/gulpScripts/main.js")
+        link(rel="stylesheet" href="/stylesheets/main.css")
+
+
+        div#id02
+            div
+                header
+                    span(onclick="startConfig()") &times;
+                    h2 Редактировать
+                div
+                    form(name="postForm" method="POST")
+                        table
+                            tr
+                                th Название:
+                                th
+                                    input(name = "name")
+                            tr
+                                th Художник:
+                                th
+                                    input(name = "artist")
+                            tr
+                                th Стартовая цена:
+                                th
+                                    input(name = "price" type="number")
+                            tr
+                                th Минимальный шаг аукциона:
+                                th
+                                    input(name = "min" type="number")
+                            tr
+                                th Максимальный шаг аукциона:
+                                th
+                                    input(name = "max" type="number")
+                            tr
+                                th Участие в аукционе
+                                th
+                                    label Yes
+                                    input(name = "in_trade" type="radio" value="yes")
+                                    label No
+                                    input(name = "in_trade" type="radio" value="no")
+                            tr
+                                th Ссылка на изображение:
+                                th
+                                    input(name = "picture")
+
+                        p
+                            p
+                                button#red(type="submit") ok
+                        p
+
+
+        div#id01
+            div
+                header
+                    span(onclick="startConfig()") &times;
+                    h2 Добавить новую картину
+                div
+                    form(action="newPicture/" method="POST")
+                        table
+                            tr
+                                th id:
+                                th
+                                    input(name = "id" type="number")
+                            tr
+                                th Название:
+                                th
+                                    input(name = "name")
+                            tr
+                                th Художник:
+                                th
+                                    input(name = "artist")
+                            tr
+                                th Описание:
+                                th
+                                    input(name = "description")
+                            tr
+                                th Стартовая цена:
+                                th
+                                    input(name = "price" type="number")
+                            tr
+                                th Минимальный шаг аукциона:
+                                th
+                                    input(name = "min" type="number")
+                            tr
+                                th Максимальный шаг аукциона:
+                                th
+                                    input(name = "max" type="number")
+                            tr
+                                th Ссылка на изображение:
+                                th
+                                    input(name = "picture")
+                        p
+                            p
+                                button#red1(type="submit") ok
+                            p
+
+        div
+            button(onclick="newPicture()") +
+            for item in arts
+                table#artTable
+                    th
+
+                        label Изображение
+                        img(src = item.picture width = "200")
+                        form(action="deletePicture/" + item.id, method="POST")
+                            button удалить
+
+                        button(onclick="editPicture(" + item.id + ",\"" + item.name + "\",\"" + item.artist + "\"," + item.price + "," + item.min + "," + item.max+","+ item.in_trade+ ",\"" +item.picture+ "\")") редактировать
+
+                        th
+                            table#info
+                                tr
+                                    th Название
+                                    th #{item.name}
+                                tr
+                                    th Художник
+                                    th #{item.artist}
+                                tr#description
+                                    th Описание
+                                    th #{item.description}
+                                tr
+                                    th Цена
+                                    th #{item.price}
+                                tr
+                                    th Минимальный шаг аукциона
+                                    th #{item.min}
+                                tr
+                                    th Максимальный шаг аукциона
+                                    th #{item.max}
+                                tr
+                                    th Участие в аукционе
+                                    if(item.in_trade)
+                                        th Yes
+                                    else
+                                        th No
+
+
+
+
+
+
+
+

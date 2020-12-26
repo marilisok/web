@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    script(src="/gulpScripts/settings.js")
+    link(rel="stylesheet" href="/stylesheets/settings.css")
+    div(onload="startConfig()")
+
+    form(action="changeSettings/" method="POST")
+        table#setting
+            tr
+                th Дата начала аукциона
+                th
+                    input(name="dt" type="date")
+                    #dt #{item.dt}
+            tr
+                th Время начала аукциона
+                th
+                    input(type="time" name="tm")
+                    #tm #{item.tm}
+            tr
+                th Таймаут продажи картины
+                th
+                    input(type="time" name="timeout")
+                    #timeout #{item.timeout}
+            tr
+                th Интервал времени отсчета до окончания торга по картине
+                th
+                    input(type="time" name="interval")
+                    #interval #{item.interval}
+            tr
+                th Пауза на изучение информации по картине
+                th
+                    input(type="time" name="pause")
+                    #pause #{item.pause}
+
+            tr
+                th
+                    button(onclick="return editSettings("+"\""+item.dt+"\",\""+item.tm+"\",\""+item.timeout+"\",\""+item.interval+"\",\""+item.pause+"\""+")") редактировать
+                th
+                    button#ok(type="submit") ok

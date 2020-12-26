@@ -1,0 +1,18 @@
+doctype html
+
+html
+    head
+        title= title
+        script(src="/jquery/jquery.js")
+        link(rel="stylesheet" href="/stylesheets/layout.css")
+    body
+        h1= title
+        div#buttons
+            form(action="/", method="GET")
+                button#main главная страница
+            form(action="/cards", method="GET")
+                button#cards карточки участников
+            form(action="/setting", method="GET")
+                button#setting настройки аукциона
+
+        block content

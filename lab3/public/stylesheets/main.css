@@ -1,0 +1,55 @@
+button {
+  width: 200px;
+}
+h1 {
+  font-family: Mistral;
+  background: #2f5cb6;
+  color: white;
+  height: 60px;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-family: Mistral;
+}
+#artTable {
+  position: relative;
+  top: -150px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+table {
+  background: #aec2ea;
+  width: 75%;
+  position: relative;
+  left: 18%;
+  text-align: left;
+}
+tr {
+  height: 40px;
+}
+#description {
+  height: 100px;
+}
+#info {
+  position: relative;
+  background: #aec2ea;
+  width: 90%;
+  left: 10%;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+#red,
+#red1 {
+  position: relative;
+  left: 37%;
+}
+#id01,
+#id02 {
+  position: relative;
+  top: -120px;
+  left: 18%;
+  border: 1px solid black;
+  backgrond: white;
+  width: 75%;
+}
