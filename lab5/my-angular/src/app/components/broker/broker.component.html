@@ -1,0 +1,20 @@
+<div class="alert alert-primary" role="alert">
+  <div *ngFor="let broker of brokers; let i = index" id="brokers">
+      <button type="button" class="btn btn-danger" id="delete" (click)="delete(broker.id)">х</button>
+      <h5 id="broker">Участник {{i}}</h5>
+    <ul>
+      <li>Имя: {{broker.name}}</li>
+      <li>Запас денежных средств: {{broker.money}}</li>
+      <app-input name="money" typeVal="number"  placeholder="Запас денежных средств" [(ngModel)]="broker.money"></app-input>
+    </ul>
+    <button type="button" class="btn btn-outline-dark" id="edit" (click)="edit(broker.id)">редактировать</button>
+  </div>
+  <form ngNativeValidate #form>
+    <div class="form-group">
+      <label>Добавление нового брокера</label>
+      <input name="name" type="text" class="form-control" placeholder="Имя брокера" [(ngModel)]="name" required>
+      <input name="money" type="number" class="form-control"  placeholder="Запас денежных средств" [(ngModel)]="money" required>
+    </div>
+    <button (click)="form.checkValidity()? add() : null" class="btn btn-info">добавить</button>
+  </form>
+</div>

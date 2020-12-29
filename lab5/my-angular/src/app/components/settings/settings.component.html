@@ -1,0 +1,10 @@
+<div class="alert alert-warning" role="alert">
+  <h2>Настроеки биржи</h2>
+  <p>Время начала торгов: {{settings.tm_start}}</p>
+  <p>Интервал времени пересчета стоимости  акций: {{settings.tm_out}}</p>
+  <p>Время окончания торгов: {{settings.tm_end}}</p>
+  <input name="tm_start" type="time" class="form-control" placeholder="Время начала торгов:" [(ngModel)]="settings.tm_start" required>
+  <input name="tm_out" type="time" class="form-control" placeholder="Интервал времени пересчета стоимости  акций" [(ngModel)]="settings.tm_out" required>
+  <input name="tm_end" type="time" class="form-control" placeholder="Время окончания торгов" [(ngModel)]="settings.tm_end" required>
+  <button type="button" class="btn btn-outline-dark"(click)="edit()">редактировать</button>
+</div>

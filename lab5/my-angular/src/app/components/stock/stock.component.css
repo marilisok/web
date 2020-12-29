@@ -1,0 +1,20 @@
+#stocks{
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+
+#delete{
+  font-size: 13px;
+  margin-top: 15px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+#stock{
+  display: inline-block;
+}
+
+input, select{
+  width: 400px;
+  margin-bottom: 10px;
+}

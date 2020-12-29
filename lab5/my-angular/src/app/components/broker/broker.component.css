@@ -1,0 +1,22 @@
+#brokers{
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+#delete{
+  font-size: 13px;
+  margin-top: 15px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+#broker{
+  display: inline-block;
+}
+#edit{
+  margin-left: 30px;
+}
+
+input{
+  width: 400px;
+  margin-bottom: 10px;
+}

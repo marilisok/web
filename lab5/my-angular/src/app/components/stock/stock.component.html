@@ -1,0 +1,27 @@
+<div class="alert alert-success" role="alert">
+  <div *ngFor="let stock of stocks; let i = index" id="stocks">
+    <button type="button" class="btn btn-danger" id="delete" (click)="delete(stock.id)">x</button>
+    <h5 id="stock">Пакет акций {{i}}</h5>
+    <ul>
+      <li>Описание пакета акций: {{stock.distribution}}</li>
+      <li>Максимальное изменение цены: {{stock.max}}</li>
+      <li>Цена пакета акций: {{stock.price}}</li>
+      <li>Количество акций: {{stock.count}}</li>
+    </ul>
+  </div>
+  <form ngNativeValidate #form>
+    <div class="form-group">
+      <label>Добавление нового пакета акций</label>
+      <input name="max" type="number" class="form-control"  placeholder="Максимальное изменение цены" [(ngModel)]="max" required>
+      <input name="price" type="number" class="form-control" placeholder="Цена пакета акций" [(ngModel)]="price" required>
+      <input name="count" type="number" class="form-control"  placeholder="Количество акций" [(ngModel)]="count" required>
+      <label for="distribution">Описание пакета акций</label>
+      <select name="distribution" id="distribution" class="form-control" [(ngModel)]="distribution" required>
+        <option>нормальный</option>
+        <option>равномерный</option>
+        <option>биномиальный</option>
+      </select>
+    </div>
+    <button (click)="form.checkValidity()? add() : null" class="btn btn-info">добавить</button>
+  </form>
+</div>
