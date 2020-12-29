@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    div(class="w3-blue")
+        h1= title
+        script(src="/scripts/filter.js")
+        a(class='w3-bar-item w3-button w3-orange', href="/book") Show all
+        a(class='w3-bar-item w3-button w3-red',  onclick="sorted_books('/book/expired')") Show expired
+        a(class='w3-bar-item w3-button w3-green', onclick="sorted_books('/book/available')") Show available
+
+
+    div(class="w3-container")
+        p
+            table(class="w3-table w3-striped w3-bordered w3-hoverable")
+                tr
+                    th
+                    th id
+                    th Название
+                    th Автор
+                    th Год выпуска
+                    th Наличие
+                    th Дата возврата
+
+                for item in books
+                    tr
+                        form(action="book/" + item.id, method="POST")
+                            th
+                                if item.in_library === "нет"
+                                    button(class="w3-button material-icons" disabled = true) delete
+                                else
+                                    button(class="w3-button material-icons") delete
+                        th
+                            a(href="book/"+item.id) #{item.id}
+                        th #{item.name}
+                        th #{item.au}
+                        th #{item.data}
+                        th #{item.in_library}
+                        th #{item.return_data}
+
+                tr
+                    form(action="new" method="POST")
+                        th
+                            button(class = "w3-button" style="font-size:20px") +
+                        th
+                            input(class="w3-input" name = "id", type="text")
+                        th
+                            input(class="w3-input" name = "nm", type="text")
+                        th
+                            input(class="w3-input" name = "au", type="text")
+                        th
+                            input(class="w3-input" name = "dt", type="date")
+                        th
+                        th

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    div(class="w3-blue")
+        h1= title
+
+    div(class="w3-display-middle w3-large")
+        form(action="/book" method="GET")
+            p
+            p
+            label #{msg}
+            p
+            div(class="w3-container")
+                button(class="w3-button w3-block w3-white w3-border w3-border-blue" type="Submit") ok

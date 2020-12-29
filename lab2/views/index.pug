@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    div(class="w3-blue")
+        h1= title
+    div(class="w3-display-middle w3-large")
+        p Welcome to #{title}
+        form(action="/book" method="GET")
+            button(class="w3-button w3-block w3-white w3-border w3-border-blue w3-round-large" type="Submit") вход

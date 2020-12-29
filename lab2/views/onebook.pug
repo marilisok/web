@@ -1,0 +1,86 @@
+extends layout
+
+block content
+    div(class="w3-blue")
+        h1= title
+
+    div(class="w3-container")
+        table(class="w3-table w3-striped w3-bordered w3-hoverable")
+            tr
+                th id
+                th Название
+                th Автор
+                th Дата издания
+                th Наличие
+                th Читатель
+                th Дата возврата
+
+            tr
+                th #{item.id}
+                th #{item.name}
+                th #{item.au}
+                th #{item.data}
+                th #{item.in_library}
+                th #{item.person}
+                th #{item.return_data}
+
+        div(class = "w3-container")
+            if item.in_library === "нет"
+                button(class = "w3-margin-top w3-button w3-white w3-border w3-border-blue w3-round-large" style="width:30%" disabled = true) Взять книгу
+            else
+                button(class = "w3-margin-top w3-button w3-white w3-border w3-border-blue w3-round-large"
+                onclick="document.getElementById('id01').style.display='block'" style="width:30%") Взять книгу
+
+                #id01.w3-modal
+                    .w3-modal-content
+                        .w3-container
+                            span.w3-button.w3-display-topright(onclick="document.getElementById('id01').style.display='none'") &times;
+                            form(action="reader/" + item.id, method="POST")
+                                p(style = "font-weight: bold") ФИО читателя
+                                input(class="w3-input" name="nm" required)
+                                p(style = "font-weight: bold") Дата возвращения
+                                input(class="w3-input" type="date", name="dt" required)
+                                p
+
+                                div(class = "w3-container w3-center")
+                                    button(class="w3-button w3-white w3-border w3-border-blue w3-round-large w3-margin-top" style="width:30%" type="submit") ok
+                                    p
+                                    p
+
+        div(class = "w3-container")
+            if item.in_library === "нет"
+                form(action="back/" + item.id, method="POST")
+                    button(class = "w3-margin-top w3-button w3-white w3-border w3-border-blue w3-round-large" style="width:30%") Вернуть книгу
+            else
+                button(class = "w3-margin-top w3-button w3-white w3-border w3-border-blue w3-round-large" style="width:30%" disabled = true) Вернуть книгу
+
+
+        div(class="w3-container")
+            if item.in_library === "нет"
+                button(onclick="document.getElementById('id02').style.display='block'"
+                class = "w3-margin-top w3-button w3-white w3-border w3-border-blue w3-round-large" style="width:30%" disabled = true) Редактировать
+            else
+                button(onclick="document.getElementById('id02').style.display='block'"
+                class = "w3-margin-top w3-button w3-white w3-border w3-border-blue w3-round-large" style="width:30%") Редактировать
+            #id02.w3-modal
+                .w3-modal-content
+                    .w3-container
+                        span.w3-button.w3-display-topright(onclick="document.getElementById('id02').style.display='none'") &times;
+                        form(action="edit/" + item.id, method="POST")
+                            table(class="w3-table w3-margin-top")
+                                tr
+                                    th  Название
+                                    th  Автор
+                                    th  Дата издания
+                                tr
+                                    th
+                                       input(class="w3-input" name = "nm", value=item.name required)
+                                    th
+                                       input(class="w3-input" name = "au", value=item.au required)
+                                    th
+                                       input(class="w3-input" type = "date", name = "dt", value=item.data)
+
+                            div(class = "w3-container w3-center")
+                                button(class="w3-button w3-white w3-border w3-border-blue w3-round-large w3-margin-top" style="width:30%") ok
+                                p
+                                p
